@@ -1,32 +1,73 @@
-# Healthcare LIMS Testing Project
-A comprehensive QA testing portfolio for a Laboratory Information Management System (LIMS) in the healthcare domain.
+# Healthcare LIMS Testing Project  
+QA project simulating a Laboratory Information Management System (LIMS), focusing on healthcare workflows, data validation, and patient safety.
 
-## 🎯 What This Project Demonstrates
-- End-to-end functional testing in healthcare software
-- Business workflow validation across patient registration, sample collection, analysis, and reporting
-- Cross-functional data dependency analysis
-- Risk-based testing methodologies for medical systems
-- Domain expertise in healthcare IT and compliance (simulated)
-- System behavior verification under exceptions
-- Professional QA documentation and defect investigation practices
+---
 
-## 📦 Modules Included
-### 1. Patient & Sample Management
-- Patient Registration
-- Sample Collection & Barcoding
-### 2. Analysis & Results
-- Test Execution
-- Result Entry & Validation
-### 3. Reporting
-- Medical Report Generation
-- Approval Workflows
+## 🎯 What this project demonstrates
+- QA for regulated healthcare environments  
+- Risk-based testing with patient safety impact  
+- Validation of clinical data (units, ranges, abnormal results)  
+- Workflow testing across multiple steps  
+- API + data integrity validation  
 
-## 📸 System Architecture Diagram (Mermaid)
-```mermaid
-flowchart TD
-    A[Patient Registration] --> B[Sample Collection]
-    B --> C[Test Execution]
-    C --> D[Result Entry]
-    D --> E[Validation]
-    E --> F[Report Generation]
-```
+---
+
+## 🛡️ Compliance Considerations
+- Sensitive patient data handling  
+- Data integrity for medical decision-making  
+- Confidentiality and validation constraints  
+
+---
+
+## 🧩 Modules
+- Patient registration  
+- Test ordering  
+- Sample tracking  
+- Result management  
+
+---
+
+## 📊 Test Coverage
+- Registration validation ✔️  
+- Order validation ✔️  
+- Sample lifecycle ✔️  
+- Result validation ✔️  
+- API validation ⚠️ partial  
+
+---
+
+## 🧠 QA Strategy
+- Focus on critical data accuracy  
+- Edge cases on medical ranges  
+- Validation of abnormal conditions  
+- Multi-step workflow integrity  
+
+---
+
+## 💼 Business Impact
+Errors in this system can lead to:
+- Incorrect medical decisions  
+- Delayed diagnosis  
+- Patient safety risks  
+
+---
+
+## 🐞 Sample Bug
+**Title:** Critical patient results not flagged  
+
+**Steps:**
+1. Register patient  
+2. Order potassium test  
+3. Enter result: 9.8 mmol/L  
+4. Retrieve result  
+
+**Expected:** Critical flag = TRUE  
+**Actual:** FALSE  
+
+**Severity:** Critical  
+**Priority:** High  
+
+---
+
+## 🧠 Root Cause Hypothesis
+Potential failure in threshold validation logic for critical ranges.
